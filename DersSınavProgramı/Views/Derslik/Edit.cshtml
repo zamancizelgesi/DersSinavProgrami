@@ -1,0 +1,53 @@
+﻿@model EntityLayer.Concrete.Derslik
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h4>Derslik</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="DerslikId" />
+            <div class="form-group">
+                <label asp-for="DerslikBina" class="control-label"></label>
+                <input asp-for="DerslikBina" class="form-control" />
+                <span asp-validation-for="DerslikBina" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DerslikKodu" class="control-label"></label>
+                <input asp-for="DerslikKodu" class="form-control" />
+                <span asp-validation-for="DerslikKodu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DerslikTipi" class="control-label"></label>
+                <input asp-for="DerslikTipi" class="form-control" />
+                <span asp-validation-for="DerslikTipi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kapasite" class="control-label"></label>
+                <input asp-for="Kapasite" class="form-control" />
+                <span asp-validation-for="Kapasite" class="text-danger"></span>
+            </div>
+              <div class="form-group">
+                <label asp-for="KullanimDurumu" class="control-label"></label>
+                <input asp-for="KullanimDurumu" class="form-control" />
+                <span asp-validation-for="KullanimDurumu" class="text-danger"></span>
+            </div>
+              <div class="form-group">
+                <label asp-for="SinavKapasitesi" class="control-label"></label>
+                <input asp-for="SinavKapasitesi" class="form-control" />
+                <span asp-validation-for="SinavKapasitesi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Kaydet" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

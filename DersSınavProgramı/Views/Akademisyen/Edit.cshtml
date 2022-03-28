@@ -1,0 +1,55 @@
+﻿
+@model EntityLayer.Concrete.Akademisyen
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Ders</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="AkademisyenId" />
+              <div class="form-group">
+                <label asp-for="AkademisyenUnvani" class="control-label"></label>
+                <input asp-for="AkademisyenUnvani" class="form-control" />
+                <span asp-validation-for="AkademisyenUnvani" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AkademisyenAdi" class="control-label"></label>
+                <input asp-for="AkademisyenAdi" class="form-control" />
+                <span asp-validation-for="AkademisyenAdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AkademisyenSoyadi" class="control-label"></label>
+                <input asp-for="AkademisyenSoyadi" class="form-control" />
+                <span asp-validation-for="AkademisyenSoyadi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AkademisyenMail" class="control-label"></label>
+                <input asp-for="AkademisyenMail" class="form-control" />
+                <span asp-validation-for="AkademisyenMail" class="text-danger"></span>
+            </div>
+          
+            <div class="form-group">
+                <label asp-for="Asistan" class="control-label"></label>
+                <input asp-for="Asistan" class="form-control" />
+                <span asp-validation-for="Asistan" class="text-danger"></span>
+            </div>
+        
+            
+          
+            <div class="form-group">
+                <input type="submit" value="Kaydet" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
